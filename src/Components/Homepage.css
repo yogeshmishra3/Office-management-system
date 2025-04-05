@@ -117,7 +117,6 @@ body {
 .dashboard-main {
   flex: 1;
   padding: 30px;
-  margin-left: 260px;
   overflow-y: auto;
   height: 100vh;
   transition: all 0.3s ease;
@@ -155,7 +154,7 @@ body {
 }
 
 .time-display {
-  background-color:black;
+  background-color: black;
   padding: 10px 20px;
   border-radius: 50px;
   display: flex;
@@ -474,10 +473,12 @@ body {
     transform: scale(0.8);
     opacity: 0.5;
   }
+
   50% {
     transform: scale(1);
     opacity: 1;
   }
+
   100% {
     transform: scale(0.8);
     opacity: 0.5;
@@ -567,17 +568,17 @@ body {
   .quick-stats {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .stat-card {
     padding: 20px;
   }
-  
+
   .stat-icon {
     padding: 12px;
     font-size: 24px;
     min-width: 50px;
   }
-  
+
   .stat-value {
     font-size: 20px;
   }
@@ -587,20 +588,20 @@ body {
   .dashboard-sidebar {
     width: 220px;
   }
-  
+
   .dashboard-main {
     margin-left: 220px;
     padding: 25px;
   }
-  
+
   .quick-stats {
     gap: 20px;
   }
-  
+
   .profile-details {
     padding: 25px;
   }
-  
+
   .profile-row {
     gap: 20px;
   }
@@ -610,95 +611,95 @@ body {
   .dashboard-sidebar {
     width: 80px;
   }
-  
+
   .dashboard-sidebar.expanded {
     width: 260px;
   }
-  
+
   .logo-container {
     text-align: center;
     padding: 20px 10px;
   }
-  
+
   .logo-container h1 {
     font-size: 24px;
   }
-  
+
   .sidebar-nav li {
     padding: 15px 10px;
     justify-content: center;
   }
-  
+
   .sidebar-nav li span:not(.nav-icon) {
     display: none;
   }
-  
+
   .dashboard-sidebar.expanded .sidebar-nav li {
     padding: 14px 25px;
     justify-content: flex-start;
   }
-  
+
   .dashboard-sidebar.expanded .sidebar-nav li span:not(.nav-icon) {
     display: inline;
   }
-  
+
   .nav-icon {
     margin-right: 0;
     font-size: 22px;
   }
-  
+
   .dashboard-sidebar.expanded .nav-icon {
     margin-right: 15px;
   }
-  
+
   .sidebar-footer {
     padding: 15px 10px;
     display: flex;
     justify-content: center;
   }
-  
+
   .dashboard-sidebar.expanded .sidebar-footer {
     padding: 20px 25px;
     justify-content: flex-start;
   }
-  
+
   .logout-button span:not(.nav-icon) {
     display: none;
   }
-  
+
   .dashboard-sidebar.expanded .logout-button span:not(.nav-icon) {
     display: inline;
   }
-  
+
   .dashboard-main {
     margin-left: 80px;
     padding: 20px;
   }
-  
+
   .mobile-menu-toggle {
     display: flex;
   }
-  
+
   .sidebar-overlay.active {
     display: block;
   }
-  
+
   .quick-stats {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
   }
-  
+
   .stat-card {
     padding: 15px;
   }
-  
+
   .stat-icon {
     padding: 10px;
     margin-right: 15px;
     font-size: 20px;
     min-width: 45px;
   }
-  
+
   .profile-row {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
@@ -709,36 +710,38 @@ body {
   .dashboard-main {
     padding: 15px;
   }
-  
+
   .quick-stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
-  
+
   .header-right {
     display: none;
   }
-  
+
   .dashboard-header {
     margin-bottom: 20px;
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .profile-row {
     grid-template-columns: 1fr;
     gap: 15px;
     margin-bottom: 15px;
   }
-  
-  .card-header, .section-header {
+
+  .card-header,
+  .section-header {
     padding: 15px 20px;
   }
-  
-  .profile-details, .activity-timeline {
+
+  .profile-details,
+  .activity-timeline {
     padding: 20px;
   }
-  
+
   .timeline-icon {
     margin-right: 15px;
   }
@@ -750,57 +753,59 @@ body {
     opacity: 0;
     visibility: hidden;
   }
-  
+
   .dashboard-sidebar.expanded {
     width: 260px;
     opacity: 1;
     visibility: visible;
   }
-  
+
   .dashboard-main {
     margin-left: 0;
     padding: 15px;
     padding-top: 70px;
   }
-  
+
   .quick-stats {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  
+
   .header-left h2 {
     font-size: 22px;
   }
-  
-  .card-header, .section-header {
+
+  .card-header,
+  .section-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
-  
-  .card-header h3, .section-header h3 {
+
+  .card-header h3,
+  .section-header h3 {
     margin-bottom: 5px;
   }
-  
+
   .timeline-item {
     flex-direction: column;
   }
-  
+
   .timeline-icon {
     margin-right: 0;
     margin-bottom: 10px;
   }
-  
+
   .stat-card {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .stat-icon {
     margin-right: 0;
     margin-bottom: 15px;
   }
-  
+
   .error-container {
     padding: 25px 15px;
   }
@@ -811,19 +816,20 @@ body {
     padding: 10px;
     padding-top: 70px;
   }
-  
-  .profile-details, .activity-timeline {
+
+  .profile-details,
+  .activity-timeline {
     padding: 15px;
   }
-  
+
   .header-left h2 {
     font-size: 20px;
   }
-  
+
   .stat-value {
     font-size: 18px;
   }
-  
+
   .error-container {
     padding: 20px 10px;
   }
@@ -841,11 +847,11 @@ body {
   .dashboard-main {
     padding-bottom: 20px;
   }
-  
+
   .quick-stats {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .profile-row {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -857,15 +863,15 @@ body {
     padding: 10px;
     padding-top: 70px;
   }
-  
+
   .header-left h2 {
     font-size: 18px;
   }
-  
+
   .stat-info h3 {
     font-size: 14px;
   }
-  
+
   .stat-value {
     font-size: 16px;
   }

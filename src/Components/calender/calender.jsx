@@ -34,7 +34,7 @@ const Calender = () => {
 
   return (
       <ScheduleComponent
-        width={"80%"}
+        width={"100%"}
         height={"100%"}
         id="schedule"
         ref={scheduleObj}

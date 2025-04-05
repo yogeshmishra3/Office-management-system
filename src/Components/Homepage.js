@@ -128,41 +128,6 @@ const NewDashboard = () => {
   return (
     <div className="dashboard-wrapper">
       <div className="dashboard-container-new">
-        <div className="dashboard-sidebar">
-          <div className="logo-container">
-            <h1>OMS</h1>
-          </div>
-          <nav className="sidebar-nav">
-            <ul>
-              <li className="active">
-                <span className="nav-icon">📊</span>
-                <span>Dashboard</span>
-              </li>
-              <li>
-                <span className="nav-icon">👤</span>
-                <span>Profile</span>
-              </li>
-              <li>
-                <span className="nav-icon">🔔</span>
-                <span>Notifications</span>
-              </li>
-              <li>
-                <span className="nav-icon">⚙️</span>
-                <span>Settings</span>
-              </li>
-              <li>
-                <span className="nav-icon">❓</span>
-                <span>Help</span>
-              </li>
-            </ul>
-          </nav>
-          <div className="sidebar-footer">
-            <div className="logout-button">
-              <span className="nav-icon">🚪</span>
-              <span>Logout</span>
-            </div>
-          </div>
-        </div>
 
         <div className="dashboard-main">
           <header className="dashboard-header">

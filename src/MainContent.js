@@ -32,7 +32,8 @@ const MainContent = ({ nav }) => {
       "border-radius": "8px",
       "box-shadow": "0 2px 4px rgba(0, 0, 0, 0.1)",
       "overflow": "hidden",
-      // "margin-left": "20%"
+      "margin-left": "20%",
+
     }}>
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -54,7 +55,7 @@ const MainContent = ({ nav }) => {
         <Route path='/Inbox/email-details' element={<EmailDetails />} />
         <Route path='/Calender' element={<Calender />} />
         <Route path='/Certificate' element={<Certificate />} />
-        <Route path="/HrAttendance" element={<HrAttendance/>}/>
+        <Route path="/HrAttendance" element={<HrAttendance />} />
       </Routes>
     </div>
   )

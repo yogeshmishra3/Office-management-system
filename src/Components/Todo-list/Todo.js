@@ -10,24 +10,33 @@ const Todo = () => {
   const [newTask, setNewTask] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     axios.get("https://server-oms.vercel.app/tasks")
       .then((res) => {
-        if (res.data) setTasks(res.data);
+        if (res.data) {
+          // Filter out any malformed tasks without a title
+          const validTasks = res.data.filter(task => task && task.title);
+          setTasks(validTasks);
+        }
       })
-      .catch((err) => setErrorMessage("Error fetching tasks: " + (err.response?.data?.message || err.message)));
+      .catch((err) => setErrorMessage("Error fetching tasks: " + (err.response?.data?.message || err.message)))
+      .finally(() => setIsLoading(false));
   }, []);
 
   const addTask = () => {
     if (!newTask.trim()) return;
-    
+
     const task = { title: newTask, completed: false, date: new Date().toLocaleString() };
     axios.post("https://server-oms.vercel.app/tasks", task)
       .then((res) => {
-        if (res.data) {
+        if (res.data && res.data.title) {
           setTasks([...tasks, res.data]);
           setNewTask("");
+        } else {
+          setErrorMessage("Error: Created task has no title");
         }
       })
       .catch((err) => setErrorMessage("Error adding task: " + (err.response?.data?.message || err.message)));
@@ -36,7 +45,7 @@ const Todo = () => {
   const toggleTask = (id) => {
     const task = tasks.find(t => t._id === id);
     if (!task) return;
-    
+
     axios.put(`https://server-oms.vercel.app/tasks/${id}`, { completed: !task.completed })
       .then(() => {
         setTasks(tasks.map(t => t._id === id ? { ...t, completed: !t.completed } : t));
@@ -58,11 +67,11 @@ const Todo = () => {
     }
   };
 
-  // Filter tasks based on search query
-  const filteredTasks = tasks.filter(task => 
-    task.title.toLowerCase().includes(searchQuery.toLowerCase())
+  // Filter tasks based on search query - added null check for title
+  const filteredTasks = tasks.filter(task =>
+    task && task.title && task.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
-  
+
   return (
     <div className="todo-main-container">
       {/* <Navbar /> */}
@@ -100,7 +109,7 @@ const Todo = () => {
             </div>
           </div>
 
-          {/* New search box */}
+          {/* Search box */}
           <div className="todo-search-container">
             <div className="todo-search-wrapper">
               <Search size={18} className="todo-search-icon" />
@@ -112,8 +121,8 @@ const Todo = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
               {searchQuery && (
-                <button 
-                  className="todo-search-clear" 
+                <button
+                  className="todo-search-clear"
                   onClick={() => setSearchQuery("")}
                 >
                   <X size={16} />
@@ -123,7 +132,11 @@ const Todo = () => {
           </div>
 
           <div className="todo-list-container">
-            {filteredTasks.length === 0 ? (
+            {isLoading ? (
+              <div className="todo-empty-state">
+                <p>Loading tasks...</p>
+              </div>
+            ) : filteredTasks.length === 0 ? (
               <div className="todo-empty-state">
                 {searchQuery ? (
                   <>
@@ -145,7 +158,7 @@ const Todo = () => {
                     className={`todo-item ${task.completed ? "todo-item-completed" : ""}`}
                   >
                     <div className="todo-item-content">
-                      <button 
+                      <button
                         className={`todo-complete-button ${task.completed ? "todo-complete-button-active" : ""}`}
                         onClick={() => toggleTask(task._id)}
                       >
