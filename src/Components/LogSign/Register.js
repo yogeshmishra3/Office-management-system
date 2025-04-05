@@ -111,14 +111,14 @@
 // };
 
 // export default Register;
- 
+
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../AuthProvider/AuthContext';
 import "./Register.css";  // Ensure this file exists
+import registerImage from './Rectangle 21.jpg'
 
-const registerImage = "/images/Rectangle 21.jpg"; // ✅ Place image in public folder
 
 const roles = {
   Super_Admin: ["CEO", "COO", "CAO"],
@@ -139,14 +139,14 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
 
-    await signup(name, email, password, role, subRole );
-    
+    await signup(name, email, password, role, subRole);
+
   };
 
   return (

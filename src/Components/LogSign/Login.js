@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../AuthProvider/AuthContext';
+import loginImage from './Rectangle 20.jpg';
 import './Login.css';
 
-const loginImage = "/images/Rectangle 20.jpg"; // ✅ Image should be in the `public` folder
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -73,7 +74,7 @@ const Login = () => {
             </div>
 
             <div>
-      
+
               {/* Login Button */}
               <button type="submit" className="login-btn">Login</button>
             </div>
