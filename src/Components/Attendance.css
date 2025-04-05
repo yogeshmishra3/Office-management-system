@@ -1,0 +1,950 @@
+/* Container Styles */
+.main-cont {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.leave-container {
+  padding: 0.75rem;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* margin-left: 20%; */
+  background-color: #f5f5f5;
+}
+
+.running-figures {
+  height: auto;
+  min-height: 160px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  color: #252C58;
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+  flex: 1;
+
+}
+
+.attendance-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0;
+}
+
+.leave-overview {
+  font-size: 14px;
+  color: #666666;
+  margin: 4px 0 0 0;
+}
+
+.img-g {
+  display: flex;
+  align-items: center;
+  margin: 0 16px;
+}
+
+.img-g img {
+  width: 230px;
+  height: auto;
+  max-height: 120px;
+  margin-left: -89%;
+}
+
+.view-leave-btn {
+  background-color: #ecf7fb;
+  color: #17a2b8;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Table styles (for desktop) */
+.leave-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.leave-table thead {
+  background-color: #f8f9fa;
+}
+
+.leave-table th {
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  color: #666666;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.leave-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e9ecef;
+  color: #333333;
+}
+
+.employee-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.employee-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Card view styles (for mobile) */
+.employee-cards-container {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.employee-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.employee-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.employee-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.leave-type-badge {
+  background-color: #e8f5ff;
+  color: #3498db;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.employee-card-details {
+  margin-bottom: 16px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.detail-label {
+  color: #666666;
+  font-size: 13px;
+}
+
+.detail-value {
+  color: #333333;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.employee-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.approval-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Button styles */
+.approve-btn, .deny-btn, .details-btn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.approve-btn {
+  background-color: #e8f5ff;
+  color: #3498db;
+  margin-right: 10px;
+}
+
+.deny-btn {
+  background-color: #ffebee;
+  color: #e74c3c;
+}
+
+.details-btn {
+  background-color: #ecf7fb;
+  color: #17a2b8;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.page-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dee2e6;
+  background-color: #ffffff;
+  border-radius: 4px;
+  color: #495057;
+  cursor: pointer;
+}
+
+.page-btn.active {
+  background-color: #17a2b8;
+  color: #ffffff;
+  border-color: #17a2b8;
+}
+
+/* Modal styles */
+/* Responsive Styles for Leave Details Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  background-color: white;
+  width: 100%;
+  max-width: 780px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  max-height: 90vh;
+  overflow-y: auto;
+  margin-top: -5%;
+} 
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+h3 {
+  font-size: 1em; 
+  margin-bottom: 15px;
+ color: #333;
+}
+/* Mobile Responsiveness */
+@media screen and (max-width: 375px) {
+  .modal {
+      width: 320px;
+      margin: 0 10px;
+  }
+  
+  .modal-header h2 {
+      font-size: 16px;
+  }
+  
+  .form-group label {
+      font-size: 12px;
+  }
+  
+  .modal-input {
+      font-size: 12px;
+      padding: 6px;
+  }
+  
+  .modal-buttons button {
+      font-size: 12px;
+      padding: 6px 10px;
+  }
+}
+
+/* Responsive Design After 765px */
+@media screen and (max-width: 765px) {
+  .modal {
+      width: 90%;
+      max-width: 500px;
+  }
+  
+  .modal-header h2 {
+      font-size: 18px;
+  }
+  
+  .form-group label {
+      font-size: 14px;
+  }
+  
+  .modal-input {
+      font-size: 14px;
+      padding: 8px;
+  }
+  
+  .modal-buttons button {
+      font-size: 14px;
+      padding: 8px 12px;
+  }
+}
+
+/* Small Screens After 765px */
+@media screen and (max-width: 765px) {
+  .modal {
+      width: 80%;
+      max-width: 400px;
+      transform: scale(0.9);
+  }
+  
+  .modal-header h2 {
+      font-size: 16px;
+  }
+  
+  .form-group label {
+      font-size: 12px;
+  }
+  
+  .modal-input {
+      font-size: 12px;
+      padding: 6px;
+  }
+  
+  .modal-buttons button {
+      font-size: 12px;
+      padding: 6px 10px;
+  }
+}
+
+/* Larger Screens */
+@media screen and (min-width: 766px) {
+  .modal {
+      width: 500px;
+  }
+  
+  .modal-header h2 {
+      font-size: 22px;
+  }
+  
+  .form-group label {
+      font-size: 16px;
+  }
+  
+  .modal-input {
+      font-size: 16px;
+      padding: 12px;
+  }
+  
+  .modal-buttons button {
+      font-size: 16px;
+      padding: 12px 18px;
+  }
+}
+
+/* Common Styles */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-content {
+  padding: 20px;
+  margin-left: 0%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.modal-input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.close-btn {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+}
+
+.search-btn {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+
+/* Mobile Attendance UI styles - Updated based on the image */
+.mobile-attendance-container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mobile-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.mobile-leave-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-leave-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.leave-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.leave-type {
+  font-size: 12px;
+  color: #666666;
+}
+
+.leave-card-expanded {
+  padding: 0 16px 16px 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.leave-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.leave-status {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555555;
+  margin-top: 12px;
+}
+
+.leave-dates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.date-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.date-label {
+  font-size: 11px;
+  color: #888888;
+}
+
+.date-value {
+  font-size: 12px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.approve-button {
+  background-color: #e8f5ff;
+  color: #3498db;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  flex: 1;
+}
+
+.reject-button {
+  background-color: #ffebee;
+  color: #e74c3c;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  flex: 1;
+}
+
+.view-details-button {
+  background-color: #ecf7fb;
+  color: #17a2b8;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 8px;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
+  .leave-container {
+    padding: 15px;
+  }
+  
+  .parent-container {
+    gap: 20px;
+  }
+  
+  .main-container {
+    height: auto;
+    min-height: 150px;
+  }
+  .approve-btn {
+    background-color: #e8f5ff;
+    color: #3498db;
+    margin-right: 10px;
+  }
+  
+  .deny-btn {
+    background-color: #ffebee;
+    color: #e74c3c;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 766px) {
+  .leave-container {
+    margin-left: 0;
+  }
+  
+  .running-figures {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .text-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .img-g {
+    position: static;
+    transform: none;
+    margin: 10px auto;
+  }
+  
+  .view-leave-btn {
+    background-color: #ecf7fb;
+    color: #17a2b8;
+    margin: 10px auto;
+  }
+  .view-details-button {
+    background-color: #ecf7fb;
+    color: #17a2b8;
+    
+  }
+  
+}
+
+@media (max-width: 765px) {
+  .view-leave-details-btn {
+    background-color: #ecf7fb;
+    color: #17a2b8;
+    border: none;
+  }
+  .leave-container {
+    margin-left: 0;
+    padding: 10px;
+  }
+  
+  .leave-table {
+    display: none;
+  }
+  
+  .employee-cards-container {
+    display: flex;
+  }
+  
+  .running-figures {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px;
+  }
+  
+  .text-section {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .img-g {
+    position: static;
+    transform: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .img-g img {
+    max-width: 80%;
+  }
+  
+  .view-leave-btn {
+    background-color: #ecf7fb;
+    color: #17a2b8;
+    width: 100%;
+  }
+  
+  .parent-container {
+    flex-direction: column;
+    padding: 10px;
+    gap: 16px;
+  }
+  
+  .main-container {
+    width: 100%;
+  }
+  
+  .employee-details {
+    width: 100%;
+  }
+  
+  .employee-photo {
+    align-self: center;
+    margin-bottom: 16px;
+  }
+  
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .attendance-table th, .attendance-table td {
+    padding: 0.5rem;
+  }
+  
+  .modal {
+    width: 95%;
+    padding: 16px;
+  }
+  
+  .modal-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .view-leave-btn {
+    background-color: #ecf7fb;
+    color: #17a2b8;
+    margin: 10px auto;
+  }
+
+}
+
+/* Enhanced Mobile View (480px and below) - based on provided image */
+@media (max-width: 480px) {
+  .leave-container {
+    padding: 0;
+    margin-left: 0;
+    background-color: #ffffff;
+  }
+  
+  .running-figures, .leave-table, .employee-cards-container {
+    display: none;
+  }
+  
+  /* Mobile Attendance Header */
+  .mobile-attendance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .attendance-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+  }
+  
+  .view-leave-details-btn {
+    background-color: #ecf7fb;
+    color: #17a2b8;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  /* Mobile Leave Card Styles - matching the image */
+  .mobile-leave-cards {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+  }
+  
+  .mobile-leave-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  
+  .leave-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    position: relative;
+  }
+  
+  .card-expand-icon {
+    font-size: 18px;
+    color: #888888;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .user-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+    margin: 0;
+  }
+  
+  .leave-type {
+    font-size: 12px;
+    color: #666666;
+    margin: 2px 0 0 0;
+  }
+  
+  /* Expanded card content */
+  .leave-card-expanded {
+    padding: 12px 16px 16px;
+    border-top: 1px solid #f0f0f0;
+    background-color: #fcfcfc;
+  }
+  
+  .leave-status-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  
+  .leave-status-label {
+    font-size: 12px;
+    color: #888888;
+  }
+  
+  .leave-status-value {
+    font-size: 12px;
+    font-weight: 500;
+    color: #219653;
+  }
+  
+  .leave-dates {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  .date-column {
+    flex: 1;
+  }
+  
+  .date-label {
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 4px;
+  }
+  
+  .date-value {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333333;
+  }
+  
+  .total-days {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #666666;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  
+  .approve-button, .reject-button {
+    flex: 1;
+    border-radius: 6px;
+    padding: 8px 0;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .approve-button {
+    background-color: #e8f5ff;
+    color: #3498db;
+    border: none;
+  }
+  
+  .reject-button {
+    background-color: #ffebee;
+    color: #e74c3c;
+    border: none;
+  }
+  
+  .view-details-button {
+    background-color: #ecf7fb;
+    color: #17a2b8;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 0;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 12px;
+    width: 100%;
+  }
+  
+  /* Fix pagination for very small screens */
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .page-btn {
+    width: 32px;
+    height: 32px;
+  }
+}

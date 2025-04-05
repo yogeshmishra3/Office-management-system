@@ -1,0 +1,91 @@
+.quotation-container {
+    padding: 24px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+  
+  .quotation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .quotation-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .quotation-date {
+    color: #4b5563;
+  }
+  
+  .quotation-table {
+    width: 100%;
+    margin-top: 16px;
+    border-collapse: collapse;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .quotation-table th,
+  .quotation-table td {
+    border: 1px solid #e5e7eb;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .quotation-table th {
+    background-color: #f3f4f6;
+  }
+  
+  .quotation-table .view-details {
+    color: #2563eb;
+    cursor: pointer;
+  }
+  
+  .pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .pagination-buttons span {
+    cursor: pointer;
+    margin: 0 4px;
+  }
+
+
+
+  .tab-container {
+    display: flex;
+    align-items: top;
+    justify-content: flex-start; /* Align tabs to the left, instead of space-between */
+    width: 100%;
+    padding: 5px 1.5rem; /* Reduced top and bottom padding */
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-bottom: 2px solid #ccc;
+    gap: 2rem;
+  }
+  
+  .tab {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color:#252C58;
+  }
+  
+  .project-date {
+    font-size: 0.875rem;
+    color: #6B7280;
+  }
+
+
+
+
+  

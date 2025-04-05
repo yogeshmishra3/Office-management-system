@@ -1,0 +1,158 @@
+    /* Main container */
+  .register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f9fc; /* Light gray background */
+    padding: 20px;
+  }
+  
+  /* Card Container */
+  .register-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+    padding: 30px;
+  }
+  
+  /* Responsive layout */
+  @media (min-width: 768px) {
+    .register-card {
+      flex-direction: row;
+    }
+  }
+  
+  /* Left Section - Form */
+  .register-form-container {
+    width: 100%;
+    padding: 40px;
+  }
+  
+  @media (min-width: 768px) {
+    .register-form-container {
+      width: 50%;
+    }
+  }
+  
+  /* Title */
+  .register-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Inputs */
+  .register-form label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .register-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f8f9fc; /* Slight background like in your screenshot */
+  }
+  
+  .register-form input:focus {
+    border-color: #4f46e5;
+    outline: none;
+    box-shadow: 0 0 4px rgba(79, 70, 229, 0.2);
+  }
+  
+  /* Terms & Conditions */
+  .terms-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .terms-container input {
+    margin-right: 8px;
+  }
+  
+  .terms-container a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .terms-container a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Register Button */
+  .register-btn {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border: none;
+    text-transform: uppercase;
+  }
+  
+  .register-btn:hover {
+    background-color: #333;
+  }
+  
+  /* Login Link */
+  .login-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+  }
+  
+  .login-text a {
+    color: #4f46e5;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .login-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Right Section - Image */
+  .register-image-container {
+    display: flex;
+    background-color: #f9f9f9;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-left: 1px solid #eee;
+    width: 50%;
+    min-height: 500px;
+  }
+  
+  @media (max-width: 767px) {
+    .register-image-container {
+      display: none; /* Hide on mobile */
+    }
+  }
+  
+  .register-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
