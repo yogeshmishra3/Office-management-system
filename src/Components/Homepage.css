@@ -590,7 +590,7 @@ body {
   }
 
   .dashboard-main {
-    margin-left: 220px;
+
     padding: 25px;
   }
 
@@ -672,7 +672,6 @@ body {
   }
 
   .dashboard-main {
-    margin-left: 80px;
     padding: 20px;
   }
 
@@ -707,6 +706,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .dashboard-wrapper {
+    margin: 0;
+  }
+
   .dashboard-main {
     padding: 15px;
   }

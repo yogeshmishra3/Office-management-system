@@ -34,6 +34,7 @@ const MainContent = ({ nav }) => {
       "margin-left": "20%",
       "@media (max-width: 768px)": {
         "margin": "0",
+        "overflow": "hidden",
       }
 
     }}>
