@@ -590,7 +590,7 @@ body {
   }
 
   .dashboard-main {
-
+    margin-left: 220px;
     padding: 25px;
   }
 
@@ -672,6 +672,7 @@ body {
   }
 
   .dashboard-main {
+    margin-left: 80px;
     padding: 20px;
   }
 
