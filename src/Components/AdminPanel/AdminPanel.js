@@ -3,7 +3,7 @@ import { useAuth } from '../AuthProvider/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { navigationMenus } from '../../navigationMenus';
 import "../../App.css";
-import Navbar from '../Navbar';
+// import Navbar from '../Navbar';
 import MainContent from '../../MainContent';
 
 const AdminPanel = () => {
@@ -25,7 +25,7 @@ const AdminPanel = () => {
       <div className="h-full block md:flex w-full">
         {/* <div className="heading w-full flex align-center justify-center bg-red-300"><Header /></div> */}
         <div className="sidebar md:w-1/6 w-full bg-[#030027] px-5 overflow-y-scroll min-h-10 align-center">
-          <Navbar name={name} nav={nav} />
+          {/* <Navbar name={name} nav={nav} /> */}
         </div>
         <div className='min-h-custom main-content w-full md:w-5/6 bg-[#8D99AE] p-2 overflow'>
           {/* <Header /> */}

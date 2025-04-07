@@ -331,23 +331,23 @@ const Chat = () => {
         <Col md={4} className="p-0 border-end">
           <div className="sidebar-header p-3 border-bottom d-flex justify-content-between align-items-center">
             <h5>Office Chat</h5>
-            <div>
-              <Button 
-                variant="primary" 
-                size="sm" 
-                onClick={() => setShowAddFriendModal(true)}
-                className="me-2"
-              >
-                Add Friend
-              </Button>
-              <Button 
-                variant="secondary" 
-                size="sm" 
-                onClick={() => setShowNewGroupModal(true)}
-              >
-                New Group
-              </Button>
-            </div>
+            <div className="btn-cont">
+  <Button
+    variant="primary"
+    size="sm"
+    onClick={() => setShowAddFriendModal(true)}
+    className="me-2"
+  >
+    Add Friend
+  </Button>
+  <Button
+    variant="secondary"
+    size="sm"
+    onClick={() => setShowNewGroupModal(true)}
+  >
+    New Group
+  </Button>
+</div>
           </div>
 
           <Tab.Container activeKey={activeTab} onSelect={setActiveTab}>
@@ -535,13 +535,14 @@ const Chat = () => {
             </>
           ) : (
             <div className="d-flex flex-column align-items-center justify-content-center h-100">
-              <div className="text-center p-5">
+              <div className="text-center p-5 ">
                 <h4>Welcome to Office Chat</h4>
                 <p className="text-muted">
                   {chats.length === 0 
                     ? "Start by adding a friend or creating a group" 
                     : "Select a conversation to start chatting"}
                 </p>
+                <div className='flex gap-6'>
                 <Button 
                   variant="primary" 
                   onClick={() => setShowAddFriendModal(true)}
@@ -552,9 +553,11 @@ const Chat = () => {
                 <Button 
                   variant="secondary" 
                   onClick={() => setShowNewGroupModal(true)}
+                  className="me-2"
                 >
                   Create Group
                 </Button>
+                </div>
               </div>
             </div>
           )}

@@ -130,19 +130,14 @@ const NewDashboard = () => {
       <div className="dashboard-container-new">
 
         <div className="dashboard-main">
-          <header className="dashboard-header">
-            <div className="header-left">
-              <h2>{getGreeting()}{user ? `, ${user.name.split(' ')[0]}` : ''}!</h2>
-              <p>{formatDate()}</p>
-            </div>
-            <div className="header-right">
-              <div className="time-display">
-                <span className="time-icon">⏰</span>
-                <span>{formatTime()}</span>
-              </div>
-             
-            </div>
-          </header>
+        <header className="dashboard-header">
+  <div className="headers-left">
+    <h2>{getGreeting()}{user ? `, ${user.name.split(' ')[0]}` : ''}!</h2>
+  </div>
+  <div className="headers-right">
+    <p>{formatDate()}</p>
+  </div>
+</header>
 
           <div className="dashboard-content">
             <div className="quick-stats">

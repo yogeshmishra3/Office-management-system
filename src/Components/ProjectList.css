@@ -269,7 +269,7 @@
 
 .mobile-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   padding: 12px 16px;
   background-color: #ffffff;

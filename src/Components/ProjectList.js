@@ -658,9 +658,9 @@ export default function ProjectList() {
     return (
       <div className="mobile-container">
         <div className="mobile-header">
-          <button className="mobile-menu-btn">
+          {/* <button className="mobile-menu-btn">
             <FiMenu size={24} />
-          </button>
+          </button> */}
           <div className="mobile-header-right">
             <button className="mobile-notification-btn">
               <FiBell size={20} />
@@ -750,7 +750,7 @@ export default function ProjectList() {
       return (
         <div className="main-cont">
           {/* <Navbar /> */}
-          <div className="project-container" style={{ width: "80%" }}>
+          <div className="project-container" style={{ width: "100%" }}>
             <div className="loading-spinner">Loading projects...</div>
           </div>
         </div>
@@ -761,7 +761,7 @@ export default function ProjectList() {
       return (
         <div className="main-cont">
           {/* <Navbar /> */}
-          <div className="project-container" style={{ width: "80%" }}>
+          <div className="project-container" style={{ width: "100%" }}>
             <div className="error-message">Error: {error}</div>
           </div>
         </div>
@@ -769,9 +769,9 @@ export default function ProjectList() {
     }
 
     return (
-      <div className="main-cont">
+      <div className="">
         {/* <Navbar /> */}
-        <div className="project-container" style={{ width: "80%" }}>
+        <div className="project-container" style={{ width: "100%" }}>
           <SearchBar onSearch={(term) => setSearchTerm(term)} />
           <div className="border-radius-container">
             <div className="top-container" style={{ backgroundColor: "#ffffff" }}>
